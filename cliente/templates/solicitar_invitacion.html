@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="row">
+        <form class="col l4 m6 s12 offset-l4 offset-m3">
+            <div class="row">
+                <div class="input-field inline col s12">
+                    <input id="name" type="text" class="validate">
+                    <label for="name">Nombre</label>
+                </div>
+                <div class="input-field inline col s12">
+                    <input id="email" type="email" class="validate">
+                    <label for="email">Email:</label>
+                </div>
+                <div class="input-field inline col s12">
+                    <input id="university" type="text" class="validate">
+                    <label for="university">Universidad:</label>
+                </div>
+                <div class="input-field inline col s12">
+                    <input id="program" type="text" class="validate">
+                    <label for="program">Programa:</label>
+                </div>
+                <div class="input-field inline col s12">
+                    <input id="course" type="text" class="validate">
+                    <label for="course">Curso:</label>
+                </div>
+                <div class="input-field inline col s12">
+                    <input id="city" type="text" class="validate">
+                    <label for="city">Ciudad:</label>
+                </div>
+            </div>
+            <div class="row center">
+                <span><a class="waves-effect waves-light btn indigo">Limpiar datos</a></span>
+                <button class="btn waves-effect waves-light indigo" type="submit" name="action">Aceptar
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

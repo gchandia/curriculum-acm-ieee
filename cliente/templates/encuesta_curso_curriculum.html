@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row">
+    <div class="col s12">
+        <ul class="tabs tabs-fixed-width">
+            <li class="tab"><a href="#">Area 1</a></li>
+            <li class="tab"><a href="#">Area 2</a></li>
+            <li class="tab"><a href="#">Area 3</a></li>
+            <li class="tab"><a href="#">Area 4</a></li>
+            <li class="tab"><a href="#">Area 5</a></li>
+            <li class="tab"><a href="#">Area 6</a></li>
+            <li class="tab"><a href="#">Area 7</a></li>
+            <li class="tab"><a href="#">Area 8</a></li>
+            <li class="tab"><a href="#">Area 9</a></li>
+            <li class="tab"><a href="#">Area 10</a></li>
+        </ul>
+    </div>
+    <div class="col s12">
+        <ul class="tabs tabs-fixed-width">
+            <li class="tab"><a href="#">Unit 1</a></li>
+            <li class="tab"><a href="#">Unit 2</a></li>
+            <li class="tab"><a href="#">Unit 3</a></li>
+            <li class="tab"><a href="#">Unit 4</a></li>
+            <li class="tab"><a href="#">Unit 5</a></li>
+            <li class="tab"><a href="#">Unit 6</a></li>
+            <li class="tab"><a href="#">Unit 7</a></li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <form class="col l8 m10 s12 offset-l2 offset-m1">
+        <table>
+            <thead>
+                <tr>
+                    <th>Tópico</th>
+                    <th>¿Enseña este tópico</th>
+                    <th>Cantidad de horas</th>
+                    <th>Teórico o practico</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Topic 1</th>
+                    <th>
+                        <input name="topic1" type="radio" id="yes1"/>
+                        <label for="yes1">Sí</label>
+                        <input name="topic1" type="radio" id="no1" checked/>
+                        <label for="no1">No</label>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Topic 2</th>
+                    <th>
+                        <input name="topic2" type="radio" id="yes2" checked/>
+                        <label for="yes2">Sí</label>
+                        <input name="topic2" type="radio" id="no2"/>
+                        <label for="no2">No</label>
+                    </th>
+                    <th>
+                        <div class="input-field">
+                            <select>
+                                <option value="" disabled selected>Elija la cantidad de horas</option>
+                                <option value="0,5">0:30</option>
+                                <option value="1,0">1:00</option>
+                                <option value="1,5">1:30</option>
+                                <option value="2,0">2:00</option>
+                                <option value="2,5">2:30</option>
+                            </select>
+                            <label>Cantidad de horas</label>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="input-field">
+                            <select>
+                                <option value="" disabled selected>Forma de enseñanza</option>
+                                <option value="T">Teórico</option>
+                                <option value="P">Practico</option>
+                                <option value="TP">Teórico/Practico</option>
+                                <option value="PT">Practico/Teórico</option>
+                            </select>
+                            <label>Cantidad de horas</label>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Topic 3</th>
+                    <th>
+                        <input name="topic3" type="radio" id="yes3" />
+                        <label for="yes3">Sí</label>
+                        <input name="topic3" type="radio" id="no3" checked/>
+                        <label for="no3">No</label>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Topic 4</th>
+                    <th>
+                        <input name="topic4" type="radio" id="yes4"/>
+                        <label for="yes4">Sí</label>
+                        <input name="topic4" type="radio" id="no4" checked/>
+                        <label for="no4">No</label>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+        <div class="row center">
+            <button class="btn waves-effect waves-light indigo" type="submit" name="action">Guardar datos</button>
+            <span><a class="waves-effect waves-light btn indigo">Anterior</a></span>
+            <span><a class="waves-effect waves-light btn indigo">Siguiente</a></span>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
+{% block scripts %}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('select').material_select();
+        });
+    </script>
+{% endblock %}

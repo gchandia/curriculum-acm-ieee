@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2 class="center">Curso</h2>
+    <div class="row">
+        <form class="col l6 m8 s12 offset-l3 offset-m2">
+            <div class="row">
+                <p class="col s6">¿El curso se enseña semestralmente?</p>
+                <p class="col s6">
+                    <input name="semestral" type="radio" id="yes"/>
+                    <label for="yes">Sí</label>
+                    <input name="semestral" type="radio" id="no"/>
+                    <label for="no">No</label>
+                </p>
+            </div>
+            <div class="row">
+                <p class="col s4">Mencione la cantidad de evaluaciones realizadas en el transcurso del curso</p>
+                <div class="input-field col s2">
+                    <input id="controles" type="number" class="validate">
+                    <label  for=controles>Controles</label>
+                </div>
+                <div class="input-field col s2">
+                    <input id="tareas" type="number" class="validate">
+                    <label  for=tareas>Tareas</label>
+                </div>
+                <div class="input-field col s2">
+                    <input id="proyectos" type="number" class="validate">
+                    <label  for=proyectos>Proyectos</label>
+                </div>
+                <div class="input-field col s2">
+                    <input id="laboratorios" type="number" class="validate">
+                    <label  for=laboratorios>Laboratorios</label>
+                </div>
+            </div>
+            <div class="row">
+                <p class="col s4">Mencione el porcentaje de la nota final de las evaluaciones</p>
+                <div class="input-field col s2">
+                    <input id="ponderacion_controles" type="number" class="validate">
+                    <label  for=ponderacion_controles>Controles</label>
+                </div>
+                <div class="input-field col s2">
+                    <input id="ponderacion_tareas" type="number" class="validate">
+                    <label  for=ponderacion_tareas>Tareas</label>
+                </div>
+                <div class="input-field col s2">
+                    <input id="ponderacion_proyectos" type="number" class="validate">
+                    <label  for=ponderacion_proyectos>Proyectos</label>
+                </div>
+                <div class="input-field col s2">
+                    <input id="ponderacion_laboratorios" type="number" class="validate">
+                    <label  for=ponderacion_laboratorios>Laboratorios</label>
+                </div>
+            </div>
+            <div class="row center">
+                <button class="btn waves-effect waves-light indigo" type="submit" name="action">Guardar datos</button>
+                <span><a class="waves-effect waves-light btn indigo">Anterior</a></span>
+                <span><a class="waves-effect waves-light btn indigo">Siguiente</a></span>
+            </div>
+        </form>
+    </div>
+{% endblock %}

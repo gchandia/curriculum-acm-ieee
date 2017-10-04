@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="row">
+        <form class="col l4 m6 s12 offset-l4 offset-m3">
+            <div class="row">
+                <div class="input-field inline col s12">
+                    <input id="name" type="text" class="validate">
+                    <label for="name">Nombre</label>
+                </div>
+                <div class="input-field inline col s12">
+                    <input id="email" type="email" class="validate">
+                    <label for="email">Email:</label>
+                </div>
+                <div class="input-field inline col s12">
+                    <input id="contact" type="text" class="validate">
+                    <label for="contact">Método alternativo de contacto:</label>
+                </div>
+                <div class="input-field inline col s12">
+                    <input id="pass1" type="password" class="validate">
+                    <label for="pass1">Contraseña nueva:</label>
+                </div>
+                <div class="input-field inline col s12">
+                    <input id="pass2" type="password" class="validate">
+                    <label for="pass2">Confirmar contraseña nueva:</label>
+                </div>
+                <div class="input-field inline col s12">
+                    <input id="cpass" type="password" class="validate">
+                    <label for="cpass">Contraseña actual:</label>
+                </div>
+            </div>
+            <div class="row center">
+                <span><a class="waves-effect waves-light btn indigo">Limpiar datos</a></span>
+                <button class="btn waves-effect waves-light indigo" type="submit" name="action">Aceptar
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

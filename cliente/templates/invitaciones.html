@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="row center">
+        <br>
+        <span><a class="waves-effect waves-light btn indigo">Crear invitaciones</a></span>
+        <span><a class="waves-effect waves-light btn indigo">Enviar invitaciones solicitadas</a></span>
+    </div>
+    <div class="row">
+        <div class="col s10 offset-s1">
+            <table class="responsive-table striped sortable">
+                <thead>
+                    <tr>
+                        <th>Universidad</th>
+                        <th>Programa</th>
+                        <th>Curso</th>
+                        <th>Docente</th>
+                        <th>Ciudad</th>
+                        <th>Porcentaje de Avance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Universidad de Chile</td>
+                        <td>Ingeniería Civil en Computación</td>
+                        <td>Ingeniería de Software 1</td>
+                        <td>Jocelyn Simmonds</td>
+                        <td>Santiago</td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
+                        <td>Universidad de Chile</td>
+                        <td>Ingeniería Civil en Computación</td>
+                        <td>Ingeniería de Software 2</td>
+                        <td>Sergio Ochoa</td>
+                        <td>Santiago</td>
+                        <td>0%</td>
+                    </tr>
+                    <tr>
+                        <td>Universidad de Chile</td>
+                        <td>Ingeniería Civil en Computación</td>
+                        <td>Proyecto de Software</td>
+                        <td>Cecilia Bastarrica</td>
+                        <td>Santiago</td>
+                        <td>70%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

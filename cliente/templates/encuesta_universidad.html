@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2 class="center">Universidad</h2>
+    <div class="row">
+        <form class="col l6 m8 s12 offset-l3 offset-m2">
+            <div class="row">
+                <p class="col s6">Puntaje PSU mínimo últimos 3 años</p>
+                <div class="input-field col s2">
+                    <input id="min2015" type="number" class="validate">
+                    <label  for="min2015">2015</label>
+                </div>
+                <div class="input-field col s2">
+                    <input id="min2016" type="number" class="validate">
+                    <label  for="min2016">2016</label>
+                </div>
+                <div class="input-field col s2">
+                    <input id="min2017" type="number" class="validate">
+                    <label  for="min2017">2017</label>
+                </div>
+            </div>
+            <div class="row">
+                <p class="col s6">Puntaje PSU máximo últimos 3 años</p>
+                <div class="input-field col s2">
+                    <input id="max2015" type="number" class="validate">
+                    <label  for="max2015">2015</label>
+                </div>
+                <div class="input-field col s2">
+                    <input id="max2016" type="number" class="validate">
+                    <label  for="max2016">2016</label>
+                </div>
+                <div class="input-field col s2">
+                    <input id="max2017" type="number" class="validate">
+                    <label  for="max2017">2017</label>
+                </div>
+            </div>
+            <div class="row">
+                <p class="col s6">¿La universidad tiene plan común asociado?</p>
+                <p class="col s6">
+                    <input name="comun" type="radio" id="yes"/>
+                    <label for="yes">Sí</label>
+                    <input name="comun" type="radio" id="no"/>
+                    <label for="no">No</label>
+                </p>
+            </div>
+            <div class="row">
+                <p class="col s6">¿Qué carreras de computación tiene asociado pregrado?</p>
+                <div class="input-field col s4">
+                    <input id="carrera" type="text" class="validate">
+                    <label for="carrera">Nombre carrera</label>
+                </div>
+                <a class="btn-floating btn-large waves-effect waves-light indigo"><i class="material-icons">add</i></a>
+            </div>
+            <div class="row center">
+                <button class="btn waves-effect waves-light indigo" type="submit" name="action">Guardar datos</button>
+                <span><a class="waves-effect waves-light btn indigo">Finalizar</a></span>
+            </div>
+        </form>
+    </div>
+{% endblock %}

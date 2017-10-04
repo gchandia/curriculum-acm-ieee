@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2 class="center">Programa</h2>
+    <div class="row">
+        <form class="col l6 m8 s12 offset-l3 offset-m2">
+            <div class="row">
+                <p class="col s6">¿Cuantos alumnos han entrado a la carrera en los últimos 3 años?</p>
+                <div class="input-field col s2">
+                    <input id="n2015" type="number" class="validate">
+                    <label  for="n2015">2015</label>
+                </div>
+                <div class="input-field col s2">
+                    <input id="n2016" type="number" class="validate">
+                    <label  for="n2016">2016</label>
+                </div>
+                <div class="input-field col s2">
+                    <input id="n2017" type="number" class="validate">
+                    <label  for="n2017">2017</label>
+                </div>
+            </div>
+            <div class="row">
+                <p class="col s6">¿Cual es el tiempo estimado de graduación en semestres?</p>
+                <div class="input-field col s2">
+                    <input id="sem" type="number" class="validate">
+                    <label  for="sem">Semestres</label>
+                </div>
+            </div>
+            <div class="row">
+                <p class="col s6">¿Mencione los cursos obligatorios de ingeniería de software?</p>
+                <div class="input-field col s4">
+                    <input id="obligatorio" type="text" class="validate">
+                    <label for="obligatorio">Nombre de curso</label>
+                </div>
+                <a class="btn-floating btn-large waves-effect waves-light indigo"><i class="material-icons">add</i></a>
+            </div>
+            <div class="row">
+                <p class="col s6">¿Mencione los cursos electivos de ingeniería de software?</p>
+                <div class="input-field col s4">
+                    <input id="electivo" type="text" class="validate">
+                    <label for="electivo">Nombre de curso</label>
+                </div>
+                <a class="btn-floating btn-large waves-effect waves-light indigo"><i class="material-icons">add</i></a>
+            </div>
+            <div class="row center">
+                <button class="btn waves-effect waves-light indigo" type="submit" name="action">Guardar datos y volver</button>
+                <span><a class="waves-effect waves-light btn indigo">Finalizar</a></span>
+            </div>
+        </form>
+    </div>
+{% endblock %}
