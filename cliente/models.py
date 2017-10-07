@@ -1,4 +1,6 @@
 from django.db import models
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 from django.utils.translation import ugettext as _
 from django.contrib.auth.models import User
 
@@ -62,11 +64,19 @@ class Program(models.Model):
     b4lastyear_psu_min = models.PositiveIntegerField(_("Mínimo puntaje PSU año antepasado"))
 
 
-class Teacher(models.Model):
-    # User model includes username, email, first_name, last_name, password and other fields
+class Profile(models.Model):
+
+    # User model includes username, email ,first_name, last_name, password and other fields
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    # email = models.EmailField(_("Email"))
-    # fullname = models.CharField(_("Nombre completo"), max_length=100)
-    phone = models.CharField(_("Teléfono"), max_length=100)
+    phone = models.CharField(_("Teléfono"), max_length=30)
     institutions = models.ManyToManyField(Institution, verbose_name=_("Instituciones"))
     programs = models.ManyToManyField(Program, verbose_name=_("Carreras"))
+
+    @receiver(post_save, sender=User)
+    def create_user_profile(sender, instance, created, **kwargs):
+        if created:
+            Profile.objects.create(user=instance)
+
+    @receiver(post_save, sender=User)
+    def save_user_profile(sender, instance, **kwargs):
+        instance.profile.save()

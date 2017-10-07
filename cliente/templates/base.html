@@ -1,8 +1,10 @@
 {% load static %}
+{% load i18n %}
+{% trans "Sistema de enseñanza de Ingeniería de Software" as title %}
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sistema de enseñanza de Ingeniería de Software</title>
+    <title>{{ title }}</title>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
@@ -12,12 +14,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <script type="text/javascript" src="{% static 'js/sorttable.js' %}"></script>
 </head>
-
 <body>
 <header>
     <nav class="nav indigo">
         <div class="nav-wrapper">
-            <a href="#" class="brand-logo center">Sistema de enseñanza de Ingeniería de Software</a>
+            <a href="#" class="brand-logo">{{ title }}</a>
         </div>
     </nav>
 </header>

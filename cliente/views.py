@@ -1,9 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-
-# Create your views here.
-
+from cliente.forms import UserForm
+from .forms import ProfileForm
 
 def index(request):
     return HttpResponse("Frontend cliente :D")
@@ -41,8 +40,17 @@ def encuesta_universidad(request):
     return render(request, 'encuesta_universidad.html', {})
 
 
-def registro(request):
-    return render(request, 'registro.html', {})
+def registro(request): # TODO método dummy
+    user_form = UserForm()
+    profile_form = ProfileForm()
+    if request.method == 'POST':
+        pass
+    else:
+        pass
+
+    return render(request, 'registro.html', {'user_form': user_form,
+                                             'profile_form' : profile_form
+                                             })
 
 
 def encuesta_programa(request):
