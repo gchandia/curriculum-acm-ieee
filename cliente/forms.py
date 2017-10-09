@@ -3,13 +3,13 @@ from django.contrib.auth.models import User
 from django.forms import ModelForm
 from django.forms.fields import EmailField, CharField
 
-from .models import Profile
-
-
-class ProfileForm(ModelForm):
-    class Meta:
-        model = Profile
-        fields = ['phone']
+# from .models import Profile
+#
+#
+# class ProfileForm(ModelForm):
+#     class Meta:
+#         model = Profile
+#         fields = ['phone']
 
 
 class UserForm(ModelForm):

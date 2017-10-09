@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 from cliente.forms import UserForm
-from .forms import ProfileForm
+# from .forms import ProfileForm
 
 def index(request):
     return HttpResponse("Frontend cliente :D")
@@ -42,14 +42,14 @@ def encuesta_universidad(request):
 
 def registro(request): # TODO método dummy
     user_form = UserForm()
-    profile_form = ProfileForm()
+    # profile_form = ProfileForm()
     if request.method == 'POST':
         pass
     else:
         pass
 
     return render(request, 'registro.html', {'user_form': user_form,
-                                             'profile_form' : profile_form
+                                             # 'profile_form' : profile_form
                                              })
 
 
