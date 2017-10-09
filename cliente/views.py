@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from cliente.forms import UserForm
 # from .forms import ProfileForm
 
+
 def index(request):
     return HttpResponse("Frontend cliente :D")
 
@@ -22,6 +23,10 @@ def config(request):
 
 def informacion_curso(request):
     return render(request, 'encuesta_curso_info_1.html', {})
+
+
+def informacion_curso_2(request):
+    return render(request, 'encuesta_curso_info_2.html', {})
 
 
 def admin_home(request):
@@ -55,3 +60,6 @@ def registro(request): # TODO método dummy
 
 def encuesta_programa(request):
     return render(request, 'encuesta_programa.html', {})
+
+def login(request):
+    return render(request, 'login.html', {})

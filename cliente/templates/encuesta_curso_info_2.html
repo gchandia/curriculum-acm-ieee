@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2 class="center">Curso</h2>
+    <div class="row">
+        <form class="col l6 m8 s12 offset-l3 offset-m2">
+            <div class="row">
+                <p class="col s6 m4">¿Posee cuerpo docente el curso?</p>
+                <p class="col s6 m2">
+                    <input name="docentes" type="radio" id="yes"/>
+                    <label for="yes">Sí</label>
+                    <input name="docentes" type="radio" id="no"/>
+                    <label for="no">No</label>
+                </p>
+                <p class="input-field col m2 hide-on-small-only">
+                    <input id="auxiliares" type="number" class="validate">
+                    <label  for="auxiliares">Auxiliares</label>
+                </p>
+                <p class="input-field col m2 hide-on-small-only">
+                    <input id="ayudantes" type="number" class="validate">
+                    <label  for="ayudantes">Ayudantes</label>
+                </p>
+                <p class="input-field col m2 hide-on-small-only">
+                    <input id="tutores" type="number" class="validate">
+                    <label  for="tutores">Tutores</label>
+                </p>
+            </div>
+            <div class="row hide-on-med-and-up">
+                <p class="input-field col s4">
+                    <input id="auxiliares" type="number" class="validate">
+                    <label  for="auxiliares">Auxiliares</label>
+                </p>
+                <p class="input-field col s4">
+                    <input id="ayudantes" type="number" class="validate">
+                    <label  for="ayudantes">Ayudantes</label>
+                </p>
+                <p class="input-field col s4">
+                    <input id="tutores" type="number" class="validate">
+                    <label  for="tutores">Tutores</label>
+                </p>
+            </div>
+            <div class="row">
+                <p class="col s6">Mencione la carga horaria del curso</p>
+                <div class="input-field col s2">
+                    <input id="catedra" type="number" class="validate">
+                    <label  for="catedra">Catedra</label>
+                </div>
+                <div class="input-field col s2">
+                    <input id="ayudantia" type="number" class="validate">
+                    <label  for="ayudantia">Ayudantia</label>
+                </div>
+                <div class="input-field col s2">
+                    <input id="individual" type="number" class="validate">
+                    <label  for="individual">Individual</label>
+                </div>
+            </div>
+            <div class="row">
+                <p class="col s6">El docente es full time</p>
+                <p class="col s6">
+                    <input name="full" type="radio" id="fyes"/>
+                    <label for="fyes">Sí</label>
+                    <input name="full" type="radio" id="fno"/>
+                    <label for="fno">No</label>
+                </p>
+            </div>
+            <div class="row">
+                <p class="col s6">En que semestre se dicta el curso</p>
+                <div class="input-field col s2">
+                    <input id="semestre" type="number" class="validate">
+                    <label for="semestre">Semestre</label>
+                </div>
+            </div>
+            <div class="row">
+                <p class="col s6">Cantidad de alumnos de los ultimos 3 semestres</p>
+                <div class="input-field col s2">
+                    <input id="actual" type="number" class="validate">
+                    <label  for="actual">Actual</label>
+                </div>
+                <div class="input-field col s2">
+                    <input id="pasado" type="number" class="validate">
+                    <label  for="pasado">Pasado</label>
+                </div>
+                <div class="input-field col s2">
+                    <input id="apasado" type="number" class="validate">
+                    <label  for="apasado">Antepasado</label>
+                </div>
+            </div>
+            <div class="row center">
+                <button class="btn waves-effect waves-light indigo" type="submit" name="action">Guardar datos</button>
+                <span><a class="waves-effect waves-light btn indigo">Finalizar</a></span>
+            </div>
+        </form>
+    </div>
+{% endblock %}
